@@ -1,9 +1,10 @@
 Rails.application.routes.draw do
 
-
   devise_for :users
-  #root to: "home#index"
 
-	
-  
+  resources :conversastions do 
+  	resources :messages
+  end
+
+  root to: "conversations#index"
 end
